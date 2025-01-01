@@ -27,6 +27,28 @@ function Projects() {
 }
 
 function Gallery() {
+  const images = [
+    'https://github.com/helpsulaiman/dydsspirit/blob/main/assets/gallery/image1.jpeg',
+];
+
+return (
+    <section id="gallery" style={{ padding: '20px' }}>
+        <h2>Gallery</h2>
+        <p>
+        Take a look at some of the images showcasing our projects and fieldwork.
+      </p>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
+            {images.map((src, index) => (
+                <img
+                    key={index}
+                    src={src}
+                    alt={`Gallery ${index + 1}`}
+                    style={{ width: '200px', height: '150px', objectFit: 'cover', borderRadius: '8px' }}
+                />
+            ))}
+        </div>
+    </section>
+);
   return (
     <section id="gallery" style={{ padding: "20px" }}>
       <h2>Gallery</h2>
