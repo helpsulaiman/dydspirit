@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/helpsulaiman/dydsspirit.git/static/css/main.e6c13ad2.css",
-    "main.js": "/helpsulaiman/dydsspirit.git/static/js/main.2cdc78f8.js",
-    "static/js/488.7e08a6a6.chunk.js": "/helpsulaiman/dydsspirit.git/static/js/488.7e08a6a6.chunk.js",
-    "index.html": "/helpsulaiman/dydsspirit.git/index.html",
-    "main.e6c13ad2.css.map": "/helpsulaiman/dydsspirit.git/static/css/main.e6c13ad2.css.map",
-    "main.2cdc78f8.js.map": "/helpsulaiman/dydsspirit.git/static/js/main.2cdc78f8.js.map",
-    "488.7e08a6a6.chunk.js.map": "/helpsulaiman/dydsspirit.git/static/js/488.7e08a6a6.chunk.js.map"
+    "main.css": "./static/css/main.e6c13ad2.css",
+    "main.js": "./static/js/main.d1a3807f.js",
+    "static/js/488.7e08a6a6.chunk.js": "./static/js/488.7e08a6a6.chunk.js",
+    "index.html": "./index.html",
+    "main.e6c13ad2.css.map": "./static/css/main.e6c13ad2.css.map",
+    "main.d1a3807f.js.map": "./static/js/main.d1a3807f.js.map",
+    "488.7e08a6a6.chunk.js.map": "./static/js/488.7e08a6a6.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e6c13ad2.css",
-    "static/js/main.2cdc78f8.js"
+    "static/js/main.d1a3807f.js"
   ]
 }
