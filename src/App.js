@@ -33,6 +33,10 @@ function Gallery() {
       <p>
         Take a look at some of the images showcasing our projects and fieldwork.
       </p>
+      <img
+          src={`${process.env.PUBLIC_URL}/assets/gallery/image1.jpeg`}
+          alt="Example"
+        />
     </section>
   );
 }
