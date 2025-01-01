@@ -95,7 +95,7 @@ function App() {
           }}
         >
           <h1>DYD's Spirit</h1>
-          <p>Thinking Beyond The Normal</p>
+          <p><i>"Thinking Beyond The Normal"</i></p>
         </header>
         <nav
           style={{
