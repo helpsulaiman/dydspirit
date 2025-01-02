@@ -2,7 +2,7 @@ import React from 'react';
 //import image1 from './public/image1.jpeg';
 
 export function Gallery() {
-    const images = ['/assets/images/image1.jpeg'];
+    const images = ['dydsspirit/blob/main/public/assets/images/image1.jpeg'];
 
     return (
         <section id="gallery" style={{ padding: '20px', textAlign: 'center' }}>
