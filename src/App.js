@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Gallery } from "./Gallery";
+import { Projects } from "./Projects";
 
 function Home() {
   return (
@@ -14,54 +16,6 @@ function Home() {
   );
 }
 
-function Projects() {
-  return (
-    <section id="projects" style={{ padding: "20px" }}>
-      <h2>Our Projects</h2>
-      <p>
-        Here, you can find an overview of the various projects we have worked
-        on. Stay tuned for updates!
-      </p>
-    </section>
-  );
-}
-
-function Gallery() {
-  const images = [
-    'https://github.com/helpsulaiman/dydsspirit/blob/main/assets/gallery/image1.jpeg',
-];
-
-return (
-    <section id="gallery" style={{ padding: '20px' }}>
-        <h2>Gallery</h2>
-        <p>
-        Take a look at some of the images showcasing our projects and fieldwork.
-      </p>
-        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', justifyContent: 'center' }}>
-            {images.map((src, index) => (
-                <img
-                    key={index}
-                    src={src}
-                    alt={`Gallery ${index + 1}`}
-                    style={{ width: '200px', height: '150px', objectFit: 'cover', borderRadius: '8px' }}
-                />
-            ))}
-        </div>
-    </section>
-);
-  return (
-    <section id="gallery" style={{ padding: "20px" }}>
-      <h2>Gallery</h2>
-      <p>
-        Take a look at some of the images showcasing our projects and fieldwork.
-      </p>
-      <img
-          src={`${process.env.PUBLIC_URL}/assets/gallery/image1.jpeg`}
-          alt="Example"
-        />
-    </section>
-  );
-}
 
 function Contact() {
   return (
