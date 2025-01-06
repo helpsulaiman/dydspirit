@@ -11,10 +11,10 @@ const projects = [
   },
   {
     id: 2,
-    title: "Urban Development Study: Kashmir Region",
+    title: "Coming Soon!",
     previewImage: 'https://placehold.co/600x800',
     documentUrl: '#',
-    description: "Comprehensive analysis of urban development patterns and challenges in the Kashmir region"
+    description: ""
   }
 ];
 
