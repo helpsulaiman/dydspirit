@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 //import { Projects } from './Projects';
 import { Gallery } from './Gallery';
 import { Navigation } from './Navigation';
-import { ContactUs } from './Contact';
+import { Contact } from './Contact';
 import Projects from './Projects';
 
 function App() {
@@ -16,7 +16,7 @@ function App() {
       fontSize: '0.9rem',
       marginTop: 'auto'
     }}>
-      made by helpsulaiman
+       made by <a href="https://www.instagram.com/helpsulaiman/" target="_blank" rel="noopener noreferrer">@helpsulaiman</a>
     </div>
   );
 
@@ -27,7 +27,7 @@ function App() {
       case 'gallery':
         return <Gallery />;
       case 'contact':
-        return <ContactUs />;
+        return <Contact />;
       default:
         return (
           <main style={{
@@ -95,7 +95,7 @@ function App() {
       </div>
       {/* Content Area with top padding to prevent overlap */}
       <div style={{
-        paddingTop: '80px' // Adjust this value based on your navigation height
+        paddingTop: '70px' // Adjust this value based on your navigation height
       }}></div>
 
       {/* Content Area */}

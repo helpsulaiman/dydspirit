@@ -1,93 +1,47 @@
-import React from "react";
+import React, { useEffect } from 'react';
+import './contact.css';
 
-const contactInfo = [
-  {
-    type: "Email",
-    value: "dydsspirit@gmail.com",
-    icon: "📧",
-    href: "mailto:dydsspirit@gmail.com"
-  },
-  {
-    type: "Phone",
-    value: "+91 97970 06187",
-    icon: "📞",
-    href: "tel:+919797006187"
-  }
-];
-
-export function ContactUs() {
-    return (
-      <section id="contact" style={{ 
-        padding: "40px",
-        textAlign: "center",
-        maxWidth: "1200px",
-        margin: "0 auto",
-        minHeight: "80vh",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center"
-      }}>
-        <h2 style={{
-          fontSize: "4rem",
-          marginBottom: "1rem",
-          color: "#2c3e50"
-        }}>Contact Us</h2>
-        <p style={{
-          fontSize: "1.2rem",
-          lineHeight: "1.6",
-          color: "#34495e",
-          marginBottom: "2rem"
-        }}>
-          Here are ways to contact us:
-        </p>
-        <div style={{ 
-          display: 'flex', 
-          justifyContent: 'center', 
-          flexWrap: 'wrap', 
-          gap: '30px' 
-        }}>
-          {contactInfo.map((info, index) => (
-            <a
-              key={index}
-              href={info.href}
-              style={{
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
-                padding: '30px',
-                borderRadius: '15px',
-                backgroundColor: '#fff',
-                transition: 'transform 0.3s ease',
-                cursor: 'pointer',
-                minWidth: '300px',
-                textDecoration: 'none',
-                display: 'block',
-                ':hover': {
-                  transform: 'translateY(-5px)'
+export function Contact() {
+    useEffect(() => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
                 }
-              }}
-            >
-              <div style={{
-                fontSize: '3rem',
-                marginBottom: '15px'
-              }}>
-                {info.icon}
-              </div>
-              <h3 style={{
-                fontSize: '1.8rem',
-                color: '#2c3e50',
-                marginBottom: '10px'
-              }}>
-                {info.type}
-              </h3>
-              <p style={{ 
-                fontSize: '1.4rem', 
-                color: '#34495e',
-                fontWeight: '500'
-              }}>
-                {info.value}
-              </p>
-            </a>
-          ))}
-        </div>
-      </section>
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.animate-on-scroll').forEach((element) => {
+            observer.observe(element);
+        });
+
+        return () => observer.disconnect();
+    }, []);
+
+    const emailAddress = "dydspirit@gmail.com";
+    const phoneNumber = "+91 97970 06187";
+
+    return (
+        <section id="contact" className="contact-section animate-on-scroll">
+            <h2 className="contact-title animate-on-scroll">Contact Us</h2>
+            <div className="contact-container">
+                <div className="contact-info animate-on-scroll">
+                    <h3>Get in Touch</h3>
+                    <p>Have questions? We'd love to hear from you.</p>
+                    <div className="contact-details">
+                        <div className="contact-card" onClick={() => window.location.href = `mailto:${emailAddress}`}>
+                            <div className="card-icon">✉️</div>
+                            <h4 className="card-title">Email</h4>
+                            <p>{emailAddress}</p>
+                        </div>
+                        <div className="contact-card" onClick={() => window.location.href = `tel:${phoneNumber}`}>
+                            <div className="card-icon">📞</div>
+                            <h4 className="card-title">Phone</h4>
+                            <p>{phoneNumber}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     );
 }
