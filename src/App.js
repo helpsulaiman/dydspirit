@@ -1,11 +1,24 @@
 import React, { useState } from 'react';
-import { Projects } from './Projects';
+//import { Projects } from './Projects';
 import { Gallery } from './Gallery';
 import { Navigation } from './Navigation';
 import { ContactUs } from './Contact';
+import Projects from './Projects';
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
+
+  const Footer = () => (
+    <div style={{
+      padding: '20px',
+      textAlign: 'center',
+      color: '#666',
+      fontSize: '0.9rem',
+      marginTop: 'auto'
+    }}>
+      made by helpsulaiman
+    </div>
+  );
 
   const renderContent = () => {
     switch(activeTab) {
@@ -29,10 +42,18 @@ function App() {
             <h1 style={{
               fontSize: '4rem',
               color: '#2c3e50',
-              marginBottom: '1rem',
+              marginBottom: '0.7rem',
               fontWeight: 'bold'
             }}>
               DYD's Spirit
+            </h1>
+            <h1 style={{
+              fontSize: '1.7rem',
+              color: '#2c3e50',
+              marginBottom: '1rem',
+              fontWeight: 'bold'
+            }}>
+              <i>"Thinking Beyond The Normal"</i>
             </h1>
             <p style={{
               fontSize: '1.5rem',
@@ -42,7 +63,9 @@ function App() {
               marginBottom: '2rem'
             }}>
               Design Your Degree is a flagship degree based on NEP 2020.
-              We are the Spirit of this degree.
+            It is a unique degree that offers a blend of traditional and modern education.
+            The degree is designed to prepare students for the future of work.
+            The degree is offered by the University of Kashmir.
             </p>
           </main>
         );
@@ -52,13 +75,32 @@ function App() {
   return (
     <div style={{
       minHeight: '100vh',
-      backgroundColor: '#f8f9fa'
+      backgroundColor: '#f8f9fa',
+      display: 'flex',  // Add this
+      flexDirection: 'column'  // Add this
     }}>
+       {/* Banner */}
+       <div style={{
+        position: 'fixed',
+        top: 0,
+        left: 0,
+        right: 0,
+        backgroundColor: '#f8f9fa',
+        boxShadow: '0 2px 4px rgba(0,0,0,0.1)',
+        zIndex: 100,
+        padding: '3rem 0'
+      }}>
       {/* Navigation */}
       <Navigation onTabChange={setActiveTab} activeTab={activeTab} />
-      
+      </div>
+      {/* Content Area with top padding to prevent overlap */}
+      <div style={{
+        paddingTop: '80px' // Adjust this value based on your navigation height
+      }}></div>
+
       {/* Content Area */}
       {renderContent()}
+      <Footer />  {/* Add the Footer component here */}
     </div>
   );
 }
