@@ -10,13 +10,13 @@ function App() {
 
   const Footer = () => (
     <div style={{
-      padding: '20px',
+      padding: '10px',
       textAlign: 'center',
       color: '#666',
       fontSize: '0.9rem',
       marginTop: 'auto'
     }}>
-       made by <a href="https://www.instagram.com/helpsulaiman/" target="_blank" rel="noopener noreferrer">@helpsulaiman</a>
+       made by <a href="https://linktr.ee/helpsulaiman" target="_blank" rel="noopener noreferrer">@helpsulaiman</a>
     </div>
   );
 
@@ -31,7 +31,7 @@ function App() {
       default:
         return (
           <main style={{
-            height: '100vh',
+            height: '80vh',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'center',
