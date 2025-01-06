@@ -1,44 +1,72 @@
 import React from 'react';
-//import image1 from 'https://i.imgur.com/4lrTc5P.jpg';
 
 export function Gallery() {
-    // Updated array with images and captions
     const images = [
         { src: 'https://i.imgur.com/4lrTc5P.jpg', caption: 'Visit to MERC' },
-        // Add more images as needed
-        // { src: image2, caption: 'Another amazing project photo' },
+        //{src: '/placeholder', caption: 'enter a caption' },
     ];
 
     return (
-        <section id="gallery" style={{ padding: '20px', textAlign: 'center' }}>
-            <h2 style={{ marginBottom: '20px' }}>Gallery</h2>
-            <p style={{ marginBottom: '20px' }}>
+        <section id="gallery" style={{ 
+            padding: '40px',
+            textAlign: 'center',
+            maxWidth: '1200px',
+            margin: '0 auto',
+            minHeight: '80vh',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center'
+        }}>
+            <h2 style={{
+                fontSize: '4rem',
+                marginBottom: '1rem',
+                color: '#2c3e50'
+            }}>Gallery</h2>
+            <p style={{
+                fontSize: '1.4rem',
+                lineHeight: '1.9',
+                color: '#34495e',
+                marginBottom: '2rem'
+            }}>
                 Take a look at some of the images showcasing our projects and fieldwork.
             </p>
-            <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '20px' }}>
+            <div style={{ 
+                display: 'flex', 
+                justifyContent: 'center', 
+                flexWrap: 'wrap', 
+                gap: '30px' 
+            }}>
                 {images.map((image, index) => (
                     <div
                         key={index}
                         style={{
-                            border: '1px solid #ddd',
-                            padding: '10px',
-                            borderRadius: '8px',
-                            textAlign: 'center', // Center the caption
+                            boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                            padding: '13px',
+                            borderRadius: '15px',
+                            backgroundColor: '#fff',
+                            transition: 'transform 0.3s ease',
+                            cursor: 'pointer',
+                            ':hover': {
+                                transform: 'translateY(-5px)'
+                            }
                         }}
                     >
                         <img
                             src={image.src}
                             alt={`Gallery ${index + 1}`}
                             style={{
-                                width: '300px',
-                                height: '200px',
+                                width: '350px',
+                                height: '250px',
                                 objectFit: 'cover',
                                 borderRadius: '8px',
-                                marginBottom: '10px',
+                                marginBottom: '4px',
                             }}
                         />
-                        {/* Caption */}
-                        <p style={{ fontSize: '14px', color: '#555' }}>{image.caption}</p>
+                        <p style={{ 
+                            fontSize: '1.4rem', 
+                            color: '#2c3e50',
+                            fontWeight: '500'
+                        }}>{image.caption}</p>
                     </div>
                 ))}
             </div>
