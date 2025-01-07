@@ -11,9 +11,23 @@ const projects = [
   },
   {
     id: 2,
-    title: "Coming Soon!",
-    previewImage: 'https://placehold.co/600x800',
-    documentUrl: '#',
+    title: "Assessment of Road Conditions to SKIMS Hospital",
+    previewImage: 'https://i.imgur.com/fGHjrbO.png',
+    documentUrl: 'https://drive.google.com/file/d/1Ap1ELWfqbWfTo4KfWu3HQBWXGz_Srb4H/view',
+    description: ""
+  },
+  {
+    id: 3,
+    title: "Report on Interviews with Street Vendors in Srinagar",
+    previewImage: 'https://i.imgur.com/EbpZPo0.png',
+    documentUrl: 'https://drive.google.com/file/d/1MLcS-YYjr3ROw-fvsdaR92-iUFaZTZEQ/view',
+    description: ""
+  },
+  {
+    id: 4,
+    title: "Report on Short Birdwatching Project in Srinagar(with pictures)",
+    previewImage: 'https://i.imgur.com/Jhztxu6.png',
+    documentUrl: 'https://drive.google.com/file/d/182SmYWQX4Re92MwIe70TalMjYWlUJdLT/view?usp=drive_link',
     description: ""
   }
 ];
@@ -24,8 +38,9 @@ const Projects = () => {
   return (
     <div className="projects-container">
        <h2 style={{
-          fontSize: "2.5rem",
-          marginTop: "5rem",
+          textAlign: "center",
+          fontSize: "4rem",
+          marginTop: "2.7rem",
           marginBottom: "1rem",
           color: "#2c3e50"
         }}>Our Projects</h2>

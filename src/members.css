@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 9rem;
-  padding: 5rem;
+  padding: 3.7rem;
 }
 
 .member-card {

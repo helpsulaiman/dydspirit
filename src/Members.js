@@ -6,8 +6,8 @@ const Members = () => {
     {
       id: 1,
       name: "Sulaiman Shabir",
-      role: "Group Lead",
-      image: "https://i.imgur.com/wZpeRTo.png",
+      role: "Co-Leader",
+      image: "https://i.imgur.com/P101dvV.jpg",
       description: "moew meow",
       socials: {
         linkedin: "https://linkedin.com/in/helpsulaiman",
@@ -18,29 +18,29 @@ const Members = () => {
     {
       id: 2,
       name: "Tehniyah Rayaz",
-      role: "Writer, Planner and Everything else",
-      image: "/images/jane.jpg",
-      description: "Creative, extremely creative"
+      role: "Co-Leader",
+      image: "https://i.imgur.com/wZpeRTo.png",
+      description: "Is the Writer, Planner and Everything else. Creative, extremely creative"
     },
     {
       id: 3,
       name: "Furqan Fayaz",
       role: "Professional Muncher",
-      image: "/images/mike.jpg",
+      image: "https://i.imgur.com/wZpeRTo.png",
       description: "Food consumption specialist"
     },
     {
       id: 4,
       name: "Anha Nabi",
       role: "-",
-      image: "/images/sarah.jpg",
+      image: "https://i.imgur.com/wZpeRTo.png",
       description: "-"
     },
     {
       id: 5,
       name: "Farees Ahmed",
       role: "Friends with Sulaiman",
-      image: "/images/alex.jpg",
+      image: "https://i.imgur.com/wZpeRTo.png",
       description: "Idk tbh"
     }
   ];
@@ -57,6 +57,12 @@ const Members = () => {
 
   return (
     <>
+      <h2 style={{
+          textAlign: "center",
+          fontSize: "3rem",
+          marginTop: "3.5rem", 
+          color: "#2c3e50"
+        }}>The Members</h2>
       <div className="members-container">
         {teamMembers.map((member) => (
           <div 
