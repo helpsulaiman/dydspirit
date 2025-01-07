@@ -30,9 +30,15 @@ const Projects = () => {
           color: "#2c3e50"
         }}>Our Projects</h2>
       <div className="projects-grid">
-        {projects && projects.map(project => (
-          <div key={project.id} className="project-card" 
-               onClick={() => window.open(project.documentUrl, '_blank')}>
+        {projects && projects.map((project, index) => (
+          <div 
+            key={project.id} 
+            className="project-card"
+            style={{
+              animationDelay: `${index * 0.2}s`
+            }}
+            onClick={() => window.open(project.documentUrl, '_blank')}
+          >
             <img 
               src={project.previewImage} 
               alt={project.title} 

@@ -72,6 +72,22 @@ export const Navigation = ({ onTabChange, activeTab }) => {
           Gallery
         </button>
         <button 
+          onClick={() => onTabChange('members')}
+          style={{
+            padding: '12px 24px',
+            height: '50px',
+            backgroundColor: activeTab === 'members' ? '#2c3e50' : '#fff',
+            color: activeTab === 'members' ? '#fff' : '#2c3e50',
+            border: '2px solid #2c3e50',
+            borderRadius: '5px',
+            cursor: 'pointer',
+            fontSize: '16px',
+            fontWeight: 'bold'
+          }}
+        >
+          Team Members
+        </button>
+        <button 
           onClick={() => onTabChange('contact')}
           style={{
             padding: '12px 24px',

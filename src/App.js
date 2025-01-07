@@ -4,6 +4,8 @@ import { Gallery } from './Gallery';
 import { Navigation } from './Navigation';
 import { Contact } from './Contact';
 import Projects from './Projects';
+import Members from './Members'; 
+
 
 function App() {
   const [activeTab, setActiveTab] = useState('home');
@@ -26,8 +28,11 @@ function App() {
         return <Projects />;
       case 'gallery':
         return <Gallery />;
+      case 'members':
+        return <Members />;
       case 'contact':
         return <Contact />;
+      
       default:
         return (
           <main style={{
@@ -106,3 +111,4 @@ function App() {
 }
 
 export default App;
+

@@ -5,6 +5,17 @@
     gap: 30px;
 }
 
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 .project-card {
     background: white;
     border-radius: 15px;
@@ -13,6 +24,8 @@
     transition: all 0.3s ease;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
+    opacity: 0;
+    animation: fadeIn 0.8s ease forwards;
 }
 
 .project-card:hover {
@@ -33,6 +46,7 @@
     color: #2c3e50;
     font-weight: 500;
     margin-top: 1rem;
+    text-align: center;
 }
 
 /* Animation classes */
