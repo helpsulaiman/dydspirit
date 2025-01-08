@@ -33,6 +33,7 @@
   min-width: 300px; /* Set minimum width for cards */
   opacity: 0;
   animation: fadeIn 0.8s ease forwards;
+  transition: all 0.3s ease;
 }
 .project-card h3 {
   padding: 1rem 0; /* Adds spacing around title */
@@ -42,6 +43,7 @@
 
 .project-card:hover {
   transform: translateY(-5px);
+  background-color: #c1d2fa;
 }
 
 .preview-image {

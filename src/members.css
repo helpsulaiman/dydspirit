@@ -17,6 +17,8 @@
 
 .member-card:hover {
   transform: translateY(-5px);
+  background-color: #c1d2fa;
+
 }
 
 .member-image {

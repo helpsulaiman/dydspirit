@@ -36,3 +36,32 @@
     transform: rotate(360deg);
   }
 }
+
+@media screen and (max-width: 768px) {
+  .App {
+    padding-top: 280px !important;
+  }
+  
+  nav {
+    flex-direction: column;
+    top: 150px !important;
+    right: 50% !important;
+    transform: translateX(50%);
+    width: 90%;
+    background: #f8f9fa;
+    padding: 10px;
+    z-index: 99;
+    position: fixed;
+  }
+  
+  nav button {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  div[style*="position: fixed"] {
+    height: auto;
+    padding: 1rem 0;
+    z-index: 100;
+  }
+}
